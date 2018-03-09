@@ -12,11 +12,11 @@ services:
     volumes:
       - static_data:/var/www/static
   db:
-    image: mysql:5.6
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb_file_format=Barracuda --innodb_file_per_table=1 --innodb_large_prefix --explicit_defaults_for_timestamp=1 --sql_mode=STRICT_TRANS_TABLES
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     environment:
       - TZ=Asia/Tokyo
-      - MYSQL_DATABASE=ad
+      - MYSQL_DATABASE=test
       - MYSQL_ROOT_PASSWORD=password
     ports:
       - '3306:3306'
@@ -28,7 +28,7 @@ services:
     ports:
       - '8080:8000'
     volumes:
-      - ./dj:/code
+      - ./mysite:/code
       - /code/node_modules
       - static_data:/code/static_root
     depends_on:
