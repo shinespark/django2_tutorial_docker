@@ -11,17 +11,6 @@ services:
       - web
     volumes:
       - static_data:/var/www/static
-  db:
-    image: mysql:5.7
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    environment:
-      - TZ=Asia/Tokyo
-      - MYSQL_DATABASE=test
-      - MYSQL_ROOT_PASSWORD=password
-    ports:
-      - '3306:3306'
-    volumes:
-      - ./data/mysql:/var/lib/mysql
   web:
     build: .
     command: python3 /code/manage.py runserver 0.0.0.0:8000
@@ -31,8 +20,6 @@ services:
       - ./mysite:/code
       - /code/node_modules
       - static_data:/code/static_root
-    depends_on:
-      - db
 
 volumes:
   static_data:
