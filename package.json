@@ -1,0 +1,25 @@
+{
+  "name": "django-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinespark/django2_tutorial_docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinespark/django2_tutorial_docker/issues"
+  },
+  "homepage": "https://github.com/shinespark/django2_tutorial_docker#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "npm": "^5.7.1"
+  }
+}
