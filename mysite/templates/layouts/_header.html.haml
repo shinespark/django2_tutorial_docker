@@ -1,0 +1,16 @@
+%header.header.navbar.navbar-expand-md.navbar-light.bg-light
+  %a.navbar-brand{ href: "#" }
+    Navbar
+  %button.navbar-toggler.hidden-md-up{ type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbar-text', 'aria-controls': 'navbar-text', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' }
+    %span.navbar-toggler-icon
+
+  .collapse.navbar-collapse#navbar-text
+    %ul.navbar-nav.mr-auto
+      %li.nav-item
+        %a.nav-link{ href: "{% url 'polls:index' %}" } Poll
+
+
+    %form.form-inline
+      %input.form-control.mr-sm-2{ type:'search', placeholder: 'Search', 'aria-label': "Search" }
+        %button.btn.btn-outline-success.my-2.my-sm-0{ type: "submit" }
+          Search

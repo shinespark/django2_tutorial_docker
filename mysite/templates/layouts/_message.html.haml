@@ -1,0 +1,6 @@
+- if messages
+  .row
+    .col
+      - for message in messages
+        .alert{ class: "alert-{{ message.tags }}" }
+          = message

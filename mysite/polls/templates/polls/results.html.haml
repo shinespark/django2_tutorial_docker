@@ -1,14 +1,17 @@
-%h1
-  = question.question_text
+- extends 'layouts/base.html.haml'
 
-%ul
-  - for choice in question.choice_set.all
-    %li
-      = choice.choice_text
-      \--
-      = choice.votes
-      vote
-      = choice.votes|pluralize
+- block main
+  %h1
+    = question.question_text
 
-%a{ href: "{% url 'polls:detail' question.id %}" }
-  Vote again?
+  %ul
+    - for choice in question.choice_set.all
+      %li
+        = choice.choice_text
+        \--
+        = choice.votes
+        vote
+        = choice.votes|pluralize
+
+  %a{ href: "{% url 'polls:detail' question.id %}" }
+    Vote again?

@@ -1,0 +1,32 @@
+- if is_paginated
+  .row
+    .col
+      .nav{ aria-label: 'Page navigation' }
+        %ul.pagination
+          - if page_obj.number != 1
+            %li.page-item
+              %a.page-link{ href: "?page=1" }
+                «
+          - else
+            %li.page-item.disabled
+              %span.page-link
+                «
+          - if page_obj.has_previous
+            %li.page-item
+              %a.page-link{ href: "?page={{ page_obj.previous_page_number }}" }
+                = page_obj.previous_page_number
+          %li.page-item.active
+            %span.page-link
+              = page_obj.number
+          - if page_obj.has_next
+            %li.page-item
+              %a.page-link{ href: "?page={{ page_obj.next_page_number }}" }
+                = page_obj.next_page_number
+          - if page_obj.number != page_obj.paginator.num_pages
+            %li.page-item
+              %a.page-link{ href: "?page={{ page_obj.paginator.num_pages }}" }
+                »
+          - else
+            %li.page-item.disabled
+              %span.page-link
+                »

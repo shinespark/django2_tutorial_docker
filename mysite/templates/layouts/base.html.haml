@@ -1,0 +1,27 @@
+- load static
+
+!!! 5
+%html{ lang: 'ja' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+    %title
+      - block title
+        ああああ
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{% static 'font-awesome/css/font-awesome.min.css' %}" }
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{% static 'bootstrap/dist/css/bootstrap.min.css' %}" }
+    - block stylesheets
+    %link{ rel: 'apple-touch-icon', sizes: '180x180', href: "{% static 'images/apple-touch-icon.png' %}" }
+    %link{ rel: 'icon', type: 'image/png', sizes: '32x32', href: "{% static 'images/favicon-32x32.png' %}" }
+    %link{ rel: 'icon', type: 'image/png', sizes: '16x16', href: "{% static 'images/favicon-16x16.png' %}" }
+    %meta{ name: 'theme-color', content: '#ffffff' }
+
+  %body
+    - include 'layouts/_header.html.haml'
+
+    .main.container-fluid
+      - block main
+
+    %script{ src: "{% static 'jquery/dist/jquery.min.js' %}" }
+    %script{ src: "{% static 'bootstrap/dist/js/bootstrap.min.js' %}" }
+    - block javascripts
