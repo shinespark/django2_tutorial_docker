@@ -12,5 +12,5 @@ Django 2.0 tutorial with Docker
 * Bootstrap
   * [twbs/bootstrap](https://github.com/twbs/bootstrap)
   * [FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
-* automatically disabled on form submit to prevent double-clicking
+* Automatically disabled on form submit to prevent double-clicking.
   * [rails/jquery-ujs](https://github.com/rails/jquery-ujs)
