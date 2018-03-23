@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'node_modules'),
 ]
+
+# Sass(SCSS)
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.(sass|scss)$'
+SASS_PRECISION = 8
+SASS_OUTPUT_STYLE = 'compressed'
+SASS_TEMPLATE_EXTS = ['.html', '.haml']
