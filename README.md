@@ -5,8 +5,12 @@ Django 2.0 tutorial with Docker
 
 ## more
 
-* [nyaruka/django-hamlpy](https://github.com/nyaruka/django-hamlpy)
-* [jrief/django-sass-processor](https://github.com/jrief/django-sass-processor)
-* [twbs/bootstrap](https://github.com/twbs/bootstrap)
-* [FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
-* [rails/jquery-ujs](https://github.com/rails/jquery-ujs)
+* Haml
+  * [nyaruka/django-hamlpy](https://github.com/nyaruka/django-hamlpy)
+* Sass/SCSS
+  * [jrief/django-sass-processor](https://github.com/jrief/django-sass-processor)
+* Bootstrap
+  * [twbs/bootstrap](https://github.com/twbs/bootstrap)
+  * [FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+* automatically disabled on form submit to prevent double-clicking
+  * [rails/jquery-ujs](https://github.com/rails/jquery-ujs)
